@@ -1,4 +1,4 @@
 ---
-title: Notas del Curso
+title: Inteligencia Artificial
 ---
 
