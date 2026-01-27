@@ -3,7 +3,7 @@ layout: page
 title: Inteligencia Artificial
 ---
 
-## Notas del curso
+## Posts
 
 <ul>
   {% assign posts = site.posts | sort: 'date' %}
