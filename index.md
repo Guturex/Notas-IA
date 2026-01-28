@@ -4,47 +4,52 @@ title: Inteligencia Artificial
 ---
 
 <style>
+  /* 1. Aplicamos el fondo y el oscurecimiento a TODA la página */
   body {
-    /* Restauramos el fondo completo */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("{{ '/assets/Ruffiatman.png' | relative_url }}") !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("{{ '/assets/Ruffiatman.png' | relative_url }}") !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
-    color: white !important;
+    background-color: #000 !important; /* Fondo de respaldo negro */
+    color: #f0f0f0 !important;
+    margin: 0;
   }
 
-  /* Añadimos un contenedor semi-transparente para que el texto sea legible */
-  .page-content {
-    background: rgba(0, 0, 0, 0.6) !important; /* Capa oscura detrás del texto */
-    padding: 30px !important;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
+  /* 2. Forzamos a que el encabezado y el pie de página sean transparentes o igual de oscuros */
+  .site-header, .site-footer, .wrapper, .page-content {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
-  /* Mejoramos la legibilidad de cada letra */
-  h1, h2, h3, p, li, span {
-    color: white !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  /* 3. Estilo de los textos para que resalten en la oscuridad */
+  h1, h2, h3, p, li, span, .site-title, .site-nav {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1) !important;
   }
 
-  /* Enlaces con color cian brillante para que contrasten */
-  a {
+  /* 4. Enlaces con un color cian eléctrico para que se vean bien */
+  a, .site-title {
     color: #00e5ff !important;
-    font-weight: bold;
-    text-decoration: none;
+    text-decoration: none !important;
   }
 
   a:hover {
-    text-decoration: underline;
     color: #ffffff !important;
+    text-shadow: 0 0 10px #00e5ff !important;
   }
 
-  /* Limpieza de fondos del tema original */
-  .wrapper, .site-header, .site-footer {
-    background: transparent !important;
-    border: none !important;
+  /* Ajuste para que la lista de notas se vea más limpia */
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
   }
 </style>
 
