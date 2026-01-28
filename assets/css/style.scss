@@ -1,0 +1,31 @@
+---
+---
+
+/* Esto aplica a todo el cuerpo de la página */
+body {
+    /* La ruta a tu imagen */
+    background-image: url('{{ "/assets/Ruffiatman.png" | relative_url }}');
+
+    /* Asegura que la imagen cubra toda la pantalla sin deformarse */
+    background-size: cover;
+
+    /* Evita que la imagen se repita como un mosaico */
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    /* CAMBIO CRÍTICO: Color del texto */
+    /* Como el fondo es oscuro, forzamos el texto a ser blanco */
+    color: #ffffff;
+}
+
+/* A veces los temas tienen fondos blancos en los contenedores de texto.
+   Esto intenta hacerlos transparentes para que se vea tu fondo. */
+.wrapper, .site-header, .site-footer, .page-content {
+    background-color: transparent !important;
+}
+
+/* Hacemos que los enlaces sean de un color claro para que resalten (ej. un cian claro) */
+a {
+    color: #80deea;
+}
