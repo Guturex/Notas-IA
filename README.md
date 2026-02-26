@@ -1,7 +1,7 @@
 # 🤖 NOTAS IA | @UNISON
 
 ### Visita mi página para conocer más:
-![Notas IA](https://guturex.github.io/Notas-IA/)
+[![Visitar Notas IA](https://img.shields.io/badge/Visitar%20Notas%20IA-Click%20Aquí-blueviolet?style=for-the-badge&logo=githubpages&logoColor=white)](https://guturex.github.io/Notas-IA/)
 
 ---
 
