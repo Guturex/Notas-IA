@@ -100,23 +100,24 @@ title: Inteligencia Artificial
 
 <section class="info-section">
     <div class="info-container">
-        <h2 class="info-title">Sobre este Proyecto</h2>
+        <h2 class="info-title">LeoDro DroVinci</h2>
         
         <span class="info-subtitle">
-            "Explorando los fundamentos de la computación inteligente en la UNISON."
+            "El MacKinnon de la computación."
         </span>
 
         <p class="info-text">
-            Este repositorio de notas fue creado por un estudiante de Ciencias de la Computación 
-            para centralizar el conocimiento adquirido en la materia de <strong>Inteligencia Artificial</strong>. 
-            Aquí se documentan algoritmos de búsqueda, técnicas de optimización y modelos de aprendizaje 
-            que forman la base de la tecnología moderna.
+            LeoDro DroVinci (de archivos cifrados) es el pseudónimo de un artista visual, programador y activista anónimo (activo desde aproximadamente 2023), cuya verdadera identidad permanece oculta bajo capas de encriptación y anonimato urbano. Conocido como el "Banksy del algoritmo", DroVinci es un artista del glitch-art, muralista y pionero del cripto-grafiti, quien se cree surgió de la nada en el estado de Sonora, antes de globalizar su impacto. Su obra evoca un mundo surgido de la lógica binaria donde se mezcla lo tecnológico, lo sociopolítico, lo algorítmico y lo efímero.
         </p>
 
         <p class="info-text">
-            Al igual que en la obra de Varo, la IA busca encontrar patrones en lo complejo, 
-            mezclando la lógica matemática con la creatividad computacional para resolver 
-            problemas del mundo real.
+           Su obra completa está teñida de una atmósfera de ciber-misticismo, plasmado en figuras que representan la pérdida de la privacidad en el mundo secular moderno. Su pintura y arte digital están puntualizados por un marcado interés por la iconografía del código fuente; por ello, años después, sus intervenciones han sido analizadas con frecuencia en foros de seguridad informática y literatura de vanguardia tecnológica.
         </p>
+
+        <p class="info-text">
+        Cabe señalar que, en sus escasos comunicados en redes sociales, el artista ha declarado que lo que más le importa es el impacto del error (glitch) en la sociedad, no la permanencia física de sus obras, aduciendo que el arte debe ser tan volátil como la memoria RAM. Algunas de sus obras las puedes consultar en su repositorio oficial.
+        </p>
+        
     </div>
+    
 </section>
