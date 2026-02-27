@@ -4,19 +4,18 @@ title: Inteligencia Artificial
 ---
 
 <style>
-  /* 1. Aplicamos el fondo y el oscurecimiento a TODA la página */
+  /* 1. Estilos actuales de tu página */
   body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("{{ '/assets/Ruffiatman.png' | relative_url }}") !important;
     background-size: cover !important;
     background-position: center !important;
     background-attachment: fixed !important;
     background-repeat: no-repeat !important;
-    background-color: #000 !important; /* Fondo de respaldo negro */
+    background-color: #000 !important;
     color: #f0f0f0 !important;
     margin: 0;
   }
 
-  /* 2. Forzamos a que el encabezado y el pie de página sean transparentes o igual de oscuros */
   .site-header, .site-footer, .wrapper, .page-content {
     background: transparent !important;
     background-color: transparent !important;
@@ -24,13 +23,11 @@ title: Inteligencia Artificial
     box-shadow: none !important;
   }
 
-  /* 3. Estilo de los textos para que resalten en la oscuridad */
   h1, h2, h3, p, li, span, .site-title, .site-nav {
     color: #ffffff !important;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 1) !important;
   }
 
-  /* 4. Enlaces con un color cian eléctrico para que se vean bien */
   a, .site-title {
     color: #00e5ff !important;
     text-decoration: none !important;
@@ -41,7 +38,6 @@ title: Inteligencia Artificial
     text-shadow: 0 0 10px #00e5ff !important;
   }
 
-  /* Ajuste para que la lista de notas se vea más limpia */
   ul {
     list-style-type: none;
     padding-left: 0;
@@ -50,6 +46,43 @@ title: Inteligencia Artificial
   li {
     margin-bottom: 15px;
     font-size: 1.1em;
+  }
+
+  /* 2. NUEVOS ESTILOS para el apartado de información (Estilo Remedios Varo) */
+  .info-section {
+    background-color: rgba(26, 32, 44, 0.95); /* Color oscuro sólido para contrastar con el fondo general */
+    margin-top: 50px;
+    padding: 60px 40px;
+    border-radius: 12px;
+    border-left: 5px solid #00e5ff; /* Detalle de color cian */
+  }
+
+  .info-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .info-title {
+    font-size: 2.5rem !important;
+    margin-bottom: 10px !important;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+
+  .info-subtitle {
+    font-size: 1.2rem !important;
+    color: #cbd5e0 !important;
+    font-style: italic;
+    margin: 20px 0 !important;
+    display: block;
+  }
+
+  .info-text {
+    font-size: 1.1rem !important;
+    line-height: 1.8 !important;
+    text-align: justify;
+    color: #e2e8f0 !important;
   }
 </style>
 
@@ -64,3 +97,26 @@ title: Inteligencia Artificial
     </li>
   {% endfor %}
 </ul>
+
+<section class="info-section">
+    <div class="info-container">
+        <h2 class="info-title">Sobre este Proyecto</h2>
+        
+        <span class="info-subtitle">
+            "Explorando los fundamentos de la computación inteligente en la UNISON."
+        </span>
+
+        <p class="info-text">
+            Este repositorio de notas fue creado por un estudiante de Ciencias de la Computación 
+            para centralizar el conocimiento adquirido en la materia de <strong>Inteligencia Artificial</strong>. 
+            Aquí se documentan algoritmos de búsqueda, técnicas de optimización y modelos de aprendizaje 
+            que forman la base de la tecnología moderna.
+        </p>
+
+        <p class="info-text">
+            Al igual que en la obra de Varo, la IA busca encontrar patrones en lo complejo, 
+            mezclando la lógica matemática con la creatividad computacional para resolver 
+            problemas del mundo real.
+        </p>
+    </div>
+</section>
