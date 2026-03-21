@@ -48,13 +48,13 @@ title: Inteligencia Artificial
     font-size: 1.1em;
   }
 
-  /* 2. Estilos para el apartado de información (Estilo Remedios Varo) */
+  /* 2. NUEVOS ESTILOS para el apartado de información (Estilo Remedios Varo) */
   .info-section {
-    background-color: rgba(26, 32, 44, 0.95);
+    background-color: rgba(26, 32, 44, 0.95); /* Color oscuro sólido para contrastar con el fondo general */
     margin-top: 50px;
     padding: 60px 40px;
     border-radius: 12px;
-    border-left: 5px solid #00e5ff;
+    border-left: 5px solid #00e5ff; /* Detalle de color cian */
   }
 
   .info-container {
@@ -84,34 +84,6 @@ title: Inteligencia Artificial
     text-align: justify;
     color: #e2e8f0 !important;
   }
-
-  /* 3. NUEVOS ESTILOS para apuntes del libro */
-  .book-section {
-    margin-top: 50px;
-    margin-bottom: 10px;
-  }
-
-  .book-chapter {
-    margin-bottom: 30px;
-  }
-
-  .book-chapter-title {
-    font-size: 1.2rem !important;
-    color: #00e5ff !important;
-    border-left: 3px solid #00e5ff;
-    padding-left: 10px;
-    margin-bottom: 10px !important;
-    text-shadow: none !important;
-  }
-
-  .book-chapter ul {
-    padding-left: 20px;
-  }
-
-  .book-chapter li {
-    margin-bottom: 8px;
-    font-size: 1em;
-  }
 </style>
 
 ## Notas del curso
@@ -125,28 +97,6 @@ title: Inteligencia Artificial
     </li>
   {% endfor %}
 </ul>
-
-## Apuntes del libro
-
-<div class="book-section">
-  {% assign notas_agrupadas = site.book_notes | group_by: "capitulo" | sort: "name" %}
-  {% if notas_agrupadas.size > 0 %}
-    {% for grupo in notas_agrupadas %}
-      <div class="book-chapter">
-        <p class="book-chapter-title">{{ grupo.name }}</p>
-        <ul>
-          {% for nota in grupo.items %}
-            <li>
-              <a href="{{ nota.url | relative_url }}">{{ nota.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endfor %}
-  {% else %}
-    <p>Próximamente...</p>
-  {% endif %}
-</div>
 
 <section class="info-section">
     <div class="info-container">
