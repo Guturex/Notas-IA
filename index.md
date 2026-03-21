@@ -4,7 +4,6 @@ title: Inteligencia Artificial
 ---
 
 <style>
-  /* 1. Estilos actuales de tu página */
   body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("{{ '/assets/Ruffiatman.png' | relative_url }}") !important;
     background-size: cover !important;
@@ -48,13 +47,12 @@ title: Inteligencia Artificial
     font-size: 1.1em;
   }
 
-  /* 2. NUEVOS ESTILOS para el apartado de información (Estilo Remedios Varo) */
   .info-section {
-    background-color: rgba(26, 32, 44, 0.95); /* Color oscuro sólido para contrastar con el fondo general */
+    background-color: rgba(26, 32, 44, 0.95);
     margin-top: 50px;
     padding: 60px 40px;
     border-radius: 12px;
-    border-left: 5px solid #00e5ff; /* Detalle de color cian */
+    border-left: 5px solid #00e5ff;
   }
 
   .info-container {
@@ -98,6 +96,18 @@ title: Inteligencia Artificial
   {% endfor %}
 </ul>
 
+## Apuntes del libro
+
+<ul>
+  {% assign notas = site.pages | where_exp: "p", "p.path contains '_book_notes'" | sort: 'capitulo' %}
+  {% for nota in notas %}
+    <li>
+      <a href="{{ nota.url | relative_url }}">{{ nota.title }}</a>
+      <span>- {{ nota.capitulo }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
 <section class="info-section">
     <div class="info-container">
         <h2 class="info-title">LeoDro DroVinci</h2>
@@ -116,7 +126,7 @@ title: Inteligencia Artificial
 
         <p class="info-text">
         Cabe señalar que, en sus escasos comunicados en redes sociales, el artista ha declarado que lo que más le importa es el impacto del error (glitch) en la sociedad, no la permanencia física de sus obras, aduciendo que el arte debe ser tan volátil como la memoria RAM. Algunas de sus obras las puedes consultar en su repositorio oficial.
-        </p>
+      </p>
         
     </div>
     
