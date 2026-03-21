@@ -1,7 +1,8 @@
 ---
-title: "Nombre del apunte"
+layout: post
+title: "Capítulo 1"
+date: 2026-03-21
 capitulo: "Capítulo 1"
-sitemap: false
 ---
 
 Aquí mis apuntes escritos...
