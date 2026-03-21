@@ -136,7 +136,7 @@ title: Inteligencia Artificial
   <div class="column">
     <h2>Apuntes del libro</h2>
     <ul>
-      {% assign notas = site.pages | where_exp: "p", "p.path contains '_book_notes'" | sort: 'capitulo' %}
+      {% assign notas = site.posts | where_exp: "p", "p.path contains 'book_notes'" | sort: 'capitulo' %}
       {% for nota in notas %}
         <li>
           <a href="{{ nota.url | relative_url }}">{{ nota.title }}</a>
