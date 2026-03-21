@@ -123,7 +123,13 @@ title: Inteligencia Artificial
   <div class="column">
     <h2>Notas del curso</h2>
     <ul>
-      {% assign posts = site.posts | sort: 'date' %}
+      {% assign all_posts = site.posts | sort: 'date' %}
+      {% assign posts = "" | split: "" %}
+      {% for p in all_posts %}
+        {% unless p.path contains 'book_notes' %}
+          {% assign posts = posts | push: p %}
+        {% endunless %}
+      {% endfor %}
       {% for post in posts %}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
@@ -136,7 +142,7 @@ title: Inteligencia Artificial
   <div class="column">
     <h2>Apuntes del libro</h2>
     <ul>
-      {% assign posts = site.posts | where_exp: "p", "p.path contains 'book_notes' == false" | sort: 'date' %}
+      {% assign notas = site.posts | where_exp: "p", "p.path contains 'book_notes'" | sort: 'date' %}
       {% for nota in notas %}
         <li>
           <a href="{{ nota.url | relative_url }}">{{ nota.title }}</a>
