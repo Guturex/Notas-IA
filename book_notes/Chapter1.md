@@ -1,7 +1,7 @@
 ---
-layout: page
 title: "Nombre del apunte"
 capitulo: "Capítulo 1"
+sitemap: false
 ---
 
 Aquí mis apuntes escritos...
