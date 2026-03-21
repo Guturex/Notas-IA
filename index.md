@@ -47,6 +47,40 @@ title: Inteligencia Artificial
     font-size: 1.1em;
   }
 
+  /* Layout de dos columnas */
+  .two-columns {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .column {
+    flex: 1;
+  }
+
+  .column h2 {
+    margin-top: 0;
+  }
+
+  /* Divisor vertical entre columnas */
+  .column:first-child {
+    border-right: 1px solid rgba(0, 229, 255, 0.3);
+    padding-right: 40px;
+  }
+
+  /* Responsive: en móvil se apilan */
+  @media (max-width: 600px) {
+    .two-columns {
+      flex-direction: column;
+    }
+    .column:first-child {
+      border-right: none;
+      border-bottom: 1px solid rgba(0, 229, 255, 0.3);
+      padding-right: 0;
+      padding-bottom: 30px;
+    }
+  }
+
   .info-section {
     background-color: rgba(26, 32, 44, 0.95);
     margin-top: 50px;
@@ -84,29 +118,35 @@ title: Inteligencia Artificial
   }
 </style>
 
-## Notas del curso
+<div class="two-columns">
 
-<ul>
-  {% assign posts = site.posts | sort: 'date' %}
-  {% for post in posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span>- {{ post.date | date: "%b %d, %Y" }}</span>
-    </li>
-  {% endfor %}
-</ul>
+  <div class="column">
+    <h2>Notas del curso</h2>
+    <ul>
+      {% assign posts = site.posts | sort: 'date' %}
+      {% for post in posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span>- {{ post.date | date: "%b %d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-## Apuntes del libro
+  <div class="column">
+    <h2>Apuntes del libro</h2>
+    <ul>
+      {% assign notas = site.pages | where_exp: "p", "p.path contains '_book_notes'" | sort: 'capitulo' %}
+      {% for nota in notas %}
+        <li>
+          <a href="{{ nota.url | relative_url }}">{{ nota.title }}</a>
+          <span>- {{ nota.capitulo }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 
-<ul>
-  {% assign notas = site.pages | where_exp: "p", "p.path contains '_book_notes'" | sort: 'capitulo' %}
-  {% for nota in notas %}
-    <li>
-      <a href="{{ nota.url | relative_url }}">{{ nota.title }}</a>
-      <span>- {{ nota.capitulo }}</span>
-    </li>
-  {% endfor %}
-</ul>
+</div>
 
 <section class="info-section">
     <div class="info-container">
@@ -126,8 +166,7 @@ title: Inteligencia Artificial
 
         <p class="info-text">
         Cabe señalar que, en sus escasos comunicados en redes sociales, el artista ha declarado que lo que más le importa es el impacto del error (glitch) en la sociedad, no la permanencia física de sus obras, aduciendo que el arte debe ser tan volátil como la memoria RAM. Algunas de sus obras las puedes consultar en su repositorio oficial.
-      </p>
+        </p>
         
     </div>
-    
 </section>
